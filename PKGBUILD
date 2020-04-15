@@ -1,4 +1,4 @@
-pkgname='python3-markups'
+pkgname=python-markups
 pkgver=3.0.0
 pkgrel=1
 pkgdesc='Wrapper around various text markups'
@@ -7,6 +7,9 @@ url='https://launchpad.net/python-markups'
 license=('BSD')
 depends=('python3')
 makedepends=('python3-setuptools')
+provides=('python3-markups')
+replaces=('python3-markups')
+conflicts=('python3-markups')
 source=($pkgname-$pkgver.tar.gz::http://github.com/retext-project/pymarkups/archive/$pkgver.tar.gz)
 sha256sums=('5edc73ceed7d5ee207c481cc67852b5e54c731d65a32cb06afc27c455d5e70f4')
 

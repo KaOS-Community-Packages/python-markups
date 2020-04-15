@@ -1,4 +1,4 @@
-# python3-markups
+# python-markups
 
 Wrapper around various text markups
 
