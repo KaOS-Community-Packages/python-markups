@@ -1,5 +1,6 @@
 pkgname=python-markups
-pkgver=3.0.0
+_pkgbasename=pymarkups
+pkgver=3.1.1
 pkgrel=1
 pkgdesc='Wrapper around various text markups'
 arch=('x86_64')
@@ -10,11 +11,11 @@ makedepends=('python3-setuptools')
 provides=('python3-markups')
 replaces=('python3-markups')
 conflicts=('python3-markups')
-source=($pkgname-$pkgver.tar.gz::http://github.com/retext-project/pymarkups/archive/$pkgver.tar.gz)
-sha256sums=('5edc73ceed7d5ee207c481cc67852b5e54c731d65a32cb06afc27c455d5e70f4')
+source=("http://github.com/retext-project/${_pkgbasename}/archive/${pkgver}.tar.gz")
+sha256sums=('62055078b8e10fbe6470e9cf57aa40299462c87102649817d26ae6c5d4831505')
 
 package() {
-  cd "${srcdir}"/pymarkups-$pkgver
-  python3 setup.py install --root="${pkgdir}"
-  install -Dm644 LICENSE "${pkgdir}"/usr/share/licenses/$pkgname/LICENSE
+	cd "${_pkgbasename}-${pkgver}"
+	python3 setup.py install --root="${pkgdir}"
+	install -Dm644 LICENSE "${pkgdir}"/usr/share/licenses/$pkgname/LICENSE
 }
