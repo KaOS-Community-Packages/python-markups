@@ -1,6 +1,6 @@
 pkgname=python-markups
 _pkgbasename=pymarkups
-pkgver=3.1.2
+pkgver=3.1.3
 pkgrel=1
 pkgdesc='Wrapper around various text markups'
 arch=('x86_64')
@@ -12,7 +12,7 @@ provides=('python3-markups')
 replaces=('python3-markups')
 conflicts=('python3-markups')
 source=("http://github.com/retext-project/${_pkgbasename}/archive/${pkgver}.tar.gz")
-sha256sums=('011df506e3f6a3afbf0294771ba025fc36f1969d7c4290cbdc71c437e9928afd')
+sha256sums=('c6982db63675313464fe00bb9c35ae98dc0a20c59ecb387d19cfeb6f427cee10')
 
 package() {
 	cd "${_pkgbasename}-${pkgver}"
